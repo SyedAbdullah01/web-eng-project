@@ -6,7 +6,7 @@ A pixel-perfect front-end clone of Zameen.com built for as a group semester proj
 
 ### 📋 Contents
 
-* [Demo](#demo)
+* [Demo](#https://syedabdullah01.github.io/web-eng-project/)
 * [Features](#features)
 * [Technologies](#technologies)
 * [Project Structure](#project-structure)
