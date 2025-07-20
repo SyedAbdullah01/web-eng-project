@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Property - Zameen Portal</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/icons/logo.png" />
+    <style>
+      .navbar {
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+        font-size: 1.2rem;
+      }
+      .navbar-brand img {
+        width: 100px !important;
+        height: auto;
+      }
+      .navbar-nav .nav-link {
+        margin-right: 1.2rem;
+        font-weight: 600;
+        color: #222 !important;
+        transition: color 0.2s, background 0.2s;
+        border-radius: 0.3rem;
+        padding: 0.5rem 1rem;
+      }
+      .navbar-nav .nav-link:last-child {
+        margin-right: 0;
+      }
+      .navbar-nav .nav-link.active,
+      .navbar-nav .nav-link:focus,
+      .navbar-nav .nav-link:hover {
+        color: #fff !important;
+        background: #198754;
+      }
+      .form-section {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+        padding: 2.5rem 2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+      .footer {
+        background: #222;
+        color: #fff;
+        padding: 2rem 0 1rem 0;
+        margin-top: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="assets/icons/logo.png"
+            alt="Logo"
+            width="100"
+            class="me-2"
+          />Zameen Portal
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="listings.html">Buy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="add-property.html"
+                >Add Property</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="agents.html">Agents</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact-us.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sign-up.html">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Add Property Form -->
+    <div class="container">
+      <div class="form-section mx-auto" style="max-width: 700px">
+        <h2 class="mb-4 text-center">Add a New Property</h2>
+        <form id="addPropertyForm" enctype="multipart/form-data" novalidate>
+          <div class="mb-3">
+            <label for="propertyTitle" class="form-label">Property Title</label>
+            <input
+              type="text"
+              class="form-control"
+              id="propertyTitle"
+              name="propertyTitle"
+              required
+            />
+            <div class="invalid-feedback">Please enter a property title.</div>
+          </div>
+          <div class="mb-3">
+            <label for="propertyDescription" class="form-label"
+              >Description</label
+            >
+            <textarea
+              class="form-control"
+              id="propertyDescription"
+              name="propertyDescription"
+              rows="3"
+              required
+            ></textarea>
+            <div class="invalid-feedback">Please enter a description.</div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="propertyPrice" class="form-label">Price (PKR)</label>
+              <input
+                type="number"
+                class="form-control"
+                id="propertyPrice"
+                name="propertyPrice"
+                required
+                min="1"
+              />
+              <div class="invalid-feedback">Please enter a valid price.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="propertyType" class="form-label">Property Type</label>
+              <select
+                class="form-select"
+                id="propertyType"
+                name="propertyType"
+                required
+              >
+                <option value="">Select type</option>
+                <option>House</option>
+                <option>Plot</option>
+                <option>Apartment</option>
+                <option>Commercial</option>
+              </select>
+              <div class="invalid-feedback">Please select a property type.</div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="propertyLocation" class="form-label">Location</label>
+            <input
+              type="text"
+              class="form-control"
+              id="propertyLocation"
+              name="propertyLocation"
+              required
+            />
+            <div class="invalid-feedback">Please enter a location.</div>
+          </div>
+          <div class="mb-3">
+            <label for="propertyImages" class="form-label"
+              >Property Images</label
+            >
+            <input
+              class="form-control"
+              type="file"
+              id="propertyImages"
+              name="propertyImages"
+              multiple
+              accept="image/*"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="contactName" class="form-label">Contact Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="contactName"
+              name="contactName"
+              required
+            />
+            <div class="invalid-feedback">Please enter your name.</div>
+          </div>
+          <div class="mb-3">
+            <label for="contactEmail" class="form-label">Contact Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="contactEmail"
+              name="contactEmail"
+              required
+            />
+            <div class="invalid-feedback">Please enter a valid email.</div>
+          </div>
+          <div class="mb-3">
+            <label for="contactPhone" class="form-label">Contact Phone</label>
+            <input
+              type="tel"
+              class="form-control"
+              id="contactPhone"
+              name="contactPhone"
+              required
+              pattern="[0-9\-\+\s]{7,15}"
+            />
+            <div class="invalid-feedback">
+              Please enter a valid phone number.
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success w-100">
+            Submit Property
+          </button>
+        </form>
+        <div
+          id="successMessage"
+          class="alert alert-success mt-4 d-none"
+          role="alert"
+        >
+          Property submitted successfully! Our team will review and publish it
+          soon.
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mb-3 mb-md-0">
+            <h5>Zameen Portal</h5>
+            <p>
+              Find your dream property in Pakistan. Buy, sell, or rent with
+              confidence.
+            </p>
+          </div>
+          <div class="col-md-3 mb-3 mb-md-0">
+            <h6>Quick Links</h6>
+            <ul class="list-unstyled">
+              <li><a href="about-us.html" class="text-white">About Us</a></li>
+              <li><a href="contact-us.html" class="text-white">Contact</a></li>
+              <li>
+                <a href="terms of use.html" class="text-white">Terms of Use</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h6>Contact</h6>
+            <p>Email: info@zameenportal.com<br />Phone: +92 300 0000000</p>
+          </div>
+        </div>
+        <div class="text-center mt-3">
+          &copy; 2024 Zameen Portal. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Bootstrap form validation
+      (() => {
+        "use strict";
+        const form = document.getElementById("addPropertyForm");
+        const successMessage = document.getElementById("successMessage");
+        form.addEventListener(
+          "submit",
+          function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            if (form.checkValidity()) {
+              successMessage.classList.remove("d-none");
+              form.reset();
+              form.classList.remove("was-validated");
+            } else {
+              successMessage.classList.add("d-none");
+              form.classList.add("was-validated");
+            }
+          },
+          false
+        );
+      })();
+    </script>
+  </body>
+</html>

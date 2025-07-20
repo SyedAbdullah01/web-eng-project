@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zameen Real Estate Portal</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/icons/logo.png" />
+    <style>
+      .hero {
+        background: url("assets/images/hero/karachi-skyline.jpg") center/cover
+          no-repeat;
+        min-height: 400px;
+        display: flex;
+        align-items: center;
+        color: #fff;
+        position: relative;
+      }
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        text-align: center;
+      }
+      .category-icon {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        margin-bottom: 10px;
+      }
+      .partner-logo {
+        max-height: 60px;
+        margin: 0 20px;
+      }
+      /* Increase logo and navbar size */
+      .navbar {
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+        font-size: 1.2rem;
+      }
+      .navbar-brand img {
+        width: 100px !important;
+        height: auto;
+      }
+      .navbar-nav .nav-link {
+        margin-right: 1.2rem;
+        font-weight: 600;
+        color: #222 !important;
+        transition: color 0.2s, background 0.2s;
+        border-radius: 0.3rem;
+        padding: 0.5rem 1rem;
+      }
+      .navbar-nav .nav-link:last-child {
+        margin-right: 0;
+      }
+      .navbar-nav .nav-link.active,
+      .navbar-nav .nav-link:focus,
+      .navbar-nav .nav-link:hover {
+        color: #fff !important;
+        background: #198754;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="assets/icons/logo.png"
+            alt="Logo"
+            width="100"
+            class="me-2"
+          />Zameen Portal
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="listings.html">Buy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="add-property.html">Add Property</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="agents.html">Agents</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact-us.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sign-up.html">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero position-relative">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content py-5">
+        <h1 class="display-4 fw-bold mb-3">
+          Find Your Dream Property in Pakistan
+        </h1>
+        <p class="lead mb-4">
+          Buy, sell, or rent properties with ease and confidence.
+        </p>
+        <form class="row g-2 justify-content-center">
+          <div class="col-md-4">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search by city, area, or project..."
+            />
+          </div>
+          <div class="col-md-2">
+            <select class="form-select">
+              <option selected>Property Type</option>
+              <option>House</option>
+              <option>Plot</option>
+              <option>Apartment</option>
+              <option>Commercial</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <button type="submit" class="btn btn-success w-100">Search</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="mb-4 text-center">Featured Properties</h2>
+        <div class="row g-4">
+          <!-- Property Card Example -->
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="assets/images/projects/boulevard-heights.jpg"
+                class="card-img-top"
+                alt="Boulevard Heights"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Boulevard Heights</h5>
+                <p class="card-text">PKR 2.5 Crore • DHA Phase 8, Karachi</p>
+                <a href="property-details.html" class="btn btn-primary"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="assets/images/projects/dha-phase-8.jpg"
+                class="card-img-top"
+                alt="DHA Phase 8"
+              />
+              <div class="card-body">
+                <h5 class="card-title">DHA Phase 8 Villa</h5>
+                <p class="card-text">PKR 3.1 Crore • DHA Phase 8, Karachi</p>
+                <a href="property-details.html" class="btn btn-primary"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="assets/images/projects/pine-city-villa.jpg"
+                class="card-img-top"
+                alt="Pine City Villa"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Pine City Villa</h5>
+                <p class="card-text">PKR 1.8 Crore • Pine City, Karachi</p>
+                <a href="property-details.html" class="btn btn-primary"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Add more property cards as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Explore by Category -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="mb-4 text-center">Explore by Category</h2>
+        <div class="row text-center g-4">
+          <div class="col-6 col-md-3">
+            <img
+              src="assets/images/explore-icons/plot-finder-icon.jpg"
+              class="category-icon"
+              alt="Plots"
+            />
+            <h6>Plots</h6>
+          </div>
+          <div class="col-6 col-md-3">
+            <img
+              src="assets/images/explore-icons/home-loan-icon.jpg"
+              class="category-icon"
+              alt="Homes"
+            />
+            <h6>Homes</h6>
+          </div>
+          <div class="col-6 col-md-3">
+            <img
+              src="assets/images/explore-icons/property-index-icon.jpg"
+              class="category-icon"
+              alt="Apartments"
+            />
+            <h6>Apartments</h6>
+          </div>
+          <div class="col-6 col-md-3">
+            <img
+              src="assets/images/explore-icons/construction-cost-icon.jpg"
+              class="category-icon"
+              alt="Commercial"
+            />
+            <h6>Commercial</h6>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners/Agencies -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="mb-4 text-center">Our Partners</h2>
+        <div class="d-flex flex-wrap justify-content-center align-items-center">
+          <img
+            src="assets/images/partners/home-partners-logo.jpg"
+            class="partner-logo"
+            alt="Partner 1"
+          />
+          <img
+            src="assets/images/agency-logos/al-razaq-real-estate-logo.jpg"
+            class="partner-logo"
+            alt="Al Razaq"
+          />
+          <img
+            src="assets/images/agency-logos/aw-enterprises-logo.jpg"
+            class="partner-logo"
+            alt="AW Enterprises"
+          />
+          <img
+            src="assets/images/agency-logos/bright-homes-realty-logo.jpg"
+            class="partner-logo"
+            alt="Bright Homes"
+          />
+          <!-- Add more partner logos as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mb-3 mb-md-0">
+            <h5>Zameen Portal</h5>
+            <p>
+              Find your dream property in Pakistan. Buy, sell, or rent with
+              confidence.
+            </p>
+          </div>
+          <div class="col-md-3 mb-3 mb-md-0">
+            <h6>Quick Links</h6>
+            <ul class="list-unstyled">
+              <li><a href="about-us.html" class="text-white">About Us</a></li>
+              <li><a href="contact-us.html" class="text-white">Contact</a></li>
+              <li>
+                <a href="terms of use.html" class="text-white">Terms of Use</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h6>Contact</h6>
+            <p>Email: info@zameenportal.com<br />Phone: +92 300 0000000</p>
+            <div>
+              <a href="#" class="text-white me-2"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="text-white me-2"
+                ><i class="bi bi-twitter"></i
+              ></a>
+              <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-3">
+          &copy; 2024 Zameen Portal. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
